@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Agile AI — The engineering process layer for AI-assisted development.</title>
+  <meta name="description" content="Open Agile AI is a spec-driven methodology that decomposes projects into scoped specs, validates before generation, and traces every line of code back to a requirement. Supports Claude, Gemini, OpenAI, and local models.">
+  <link rel="canonical" href="https://openagile.ai">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        OpenAgile<span class="logo-accent">.AI</span>
+      </a>
+      <div class="nav-links">
+        <a href="#gap">Why</a>
+        <a href="#solution">How</a>
+        <a href="#how-it-works">Workflow</a>
+        <a href="#features">Features</a>
+        <a href="#philosophy">Principles</a>
+        <a href="#beta" class="nav-cta">Early Access</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile">
+      <a href="#gap">Why</a>
+      <a href="#solution">How</a>
+      <a href="#how-it-works">Workflow</a>
+      <a href="#features">Features</a>
+      <a href="#philosophy">Principles</a>
+      <a href="#beta" class="nav-cta">Early Access</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-badge">Open Source &middot; Model-agnostic &middot; Spec-driven</div>
+      <h1 class="hero-title">
+        Engineering Discipline<br>
+        <span class="hero-accent">for AI-Assisted Development.</span>
+      </h1>
+      <p class="hero-sub">
+        A structured engineering process that decomposes projects into scoped specs, validates before generation, and traces every line of code back to a business requirement.
+      </p>
+      <div class="hero-alpha">Alpha &mdash; Available now. Evolving fast.</div>
+      <div class="hero-ctas">
+        <a href="#get-started" class="btn btn-primary">Get Started</a>
+        <a href="https://github.com/Agile-Vibe-Coding/OpenAgileAI" class="btn btn-secondary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          View on GitHub
+        </a>
+      </div>
+      <!-- Animated flow -->
+      <div class="hero-flow">
+        <div class="flow-step" data-step="1">
+          <div class="flow-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <span class="flow-label">Define Scope</span>
+        </div>
+        <div class="flow-arrow">&rarr;</div>
+        <div class="flow-step" data-step="2">
+          <div class="flow-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+          </div>
+          <span class="flow-label">Decompose</span>
+        </div>
+        <div class="flow-arrow">&rarr;</div>
+        <div class="flow-step" data-step="3">
+          <div class="flow-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <span class="flow-label">Seed Tasks</span>
+        </div>
+        <div class="flow-arrow">&rarr;</div>
+        <div class="flow-step" data-step="4">
+          <div class="flow-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </div>
+          <span class="flow-label">Run</span>
+        </div>
+        <div class="flow-arrow">&rarr;</div>
+        <div class="flow-step" data-step="5">
+          <div class="flow-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <span class="flow-label">Verify &amp; Ship</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE GAP -->
+  <section class="section" id="gap">
+    <div class="container">
+      <div class="section-label">The Problem</div>
+      <h2 class="section-title">Fast to Generate. Impossible to Maintain.</h2>
+      <p class="section-desc">
+        AI closes the gap between idea and code. It doesn't close the gap between code and understanding.
+        Without traceable intent, versioned context, and enforced structure,
+        you're not building a system &mdash; you're accumulating code.
+      </p>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 15s1.5-2 4-2 4 2 4 2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          </div>
+          <h3>Prompts Are Not Specs</h3>
+          <p>A prompt describes what you want. A spec defines what to build, which files to touch, which interfaces to respect, and what "done" means. Agents need specs.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <h3>No Decomposition</h3>
+          <p>You give the agent "build auth system." It figures out the breakdown on the fly. Different agents decompose differently. Architecture becomes ad-hoc.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>No Traceability</h3>
+          <p>Code gets generated. But which requirement does it satisfy? Which acceptance criteria? When something breaks, there's no trail back to intent.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+          </div>
+          <h3>Validation After the Fact</h3>
+          <p>Errors are caught after code is written &mdash; in tests, in review, in production. A bad plan costs more than a bad line of code.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Blocked Business Adoption</h3>
+          <p>Without audit trails and clear accountability, AI-generated code can't pass compliance reviews. Entire organizations can't adopt AI coding because the governance layer doesn't exist.</p>
+        </div>
+      </div>
+      <div class="problem-terminal">
+        <div class="terminal-header">
+          <span class="terminal-dot red"></span>
+          <span class="terminal-dot yellow"></span>
+          <span class="terminal-dot green"></span>
+          <span class="terminal-title">honest-assessment.sh</span>
+        </div>
+        <div class="terminal-body">
+          <code>
+<span class="t-gray">$</span> Does your agent know which files it should NOT touch?  <span class="t-yellow">[no]</span><br>
+<span class="t-gray">$</span> Can you trace this function back to a requirement?     <span class="t-yellow">[not really]</span><br>
+<span class="t-gray">$</span> Was the plan validated before code was generated?       <span class="t-yellow">[what plan?]</span><br>
+<span class="t-gray">$</span> Do two agents share the same architectural constraints? <span class="t-yellow">[hope so]</span><br>
+<span class="t-gray">$</span> Could a new developer understand WHY this code exists?  <span class="t-yellow">[good luck]</span>
+          </code>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCOUNTABILITY -->
+  <section class="section section-alt" id="accountability">
+    <div class="container">
+      <div class="section-label">For Business</div>
+      <h2 class="section-title">Your Code Must Be Auditable. AI Doesn't Change That.</h2>
+      <p class="section-desc">
+        Regulated industries, enterprise contracts, and serious products all require the same thing:
+        know what was built, why it was built, and who is accountable. AI-generated code doesn't get a free pass.
+      </p>
+      <div class="accountability-grid">
+        <div class="accountability-card">
+          <div class="accountability-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <h3>Audit Trails</h3>
+          <p>SOC 2, ISO 27001, and the EU AI Act demand traceability. Open Agile AI links every function to an acceptance criterion, every test to a requirement, every change to a decision.</p>
+        </div>
+        <div class="accountability-card">
+          <div class="accountability-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Clear Ownership</h3>
+          <p>Who approved this feature? Which requirement does it serve? When something breaks in production, you need answers &mdash; not a prompt history buried in a chat window.</p>
+        </div>
+        <div class="accountability-card">
+          <div class="accountability-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Compliance-Ready</h3>
+          <p>Fintech, healthtech, govtech &mdash; if your industry requires you to demonstrate that code meets documented requirements, Open Agile AI builds that traceability in from the start.</p>
+        </div>
+        <div class="accountability-card">
+          <div class="accountability-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3>Risk Visibility</h3>
+          <p>Which parts of the codebase were AI-generated? Which acceptance criteria are covered by tests? Open Agile AI makes these questions answerable, not guessable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section class="section" id="solution">
+    <div class="container">
+      <div class="section-label">The Process Layer</div>
+      <h2 class="section-title">Specs Before Prompts. Validation Before Generation.</h2>
+      <p class="section-desc">
+        Open Agile AI sits above your coding tools. It decomposes projects into structured specs,
+        scopes context per task, and validates everything before any agent writes a line of code.
+        Then your AI models &mdash; Claude, Gemini, OpenAI, local models &mdash; execute with precision.
+      </p>
+      <div class="pillars">
+        <div class="pillar-card">
+          <div class="pillar-number">01</div>
+          <h3>Hierarchical Decomposition</h3>
+          <div class="pillar-tree">
+            <div class="tree-node tree-root">Project</div>
+            <div class="tree-branch">
+              <div class="tree-node">Epic</div>
+              <div class="tree-branch">
+                <div class="tree-node">Story</div>
+                <div class="tree-branch">
+                  <div class="tree-node tree-leaf">Task</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>A real project decomposed into 7 epics and 37 stories &mdash; each with scoped context, acceptance criteria, and dependency maps. Each level inherits only what it needs.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-number">02</div>
+          <h3>Structured Specs, Not Prompts</h3>
+          <ul class="ceremony-list">
+            <li>
+              <span class="ceremony-name">Scope</span>
+              <span class="ceremony-desc">Define features, constraints, and acceptance criteria</span>
+            </li>
+            <li>
+              <span class="ceremony-name">Decompose</span>
+              <span class="ceremony-desc">Break into epics, stories, and atomic tasks</span>
+            </li>
+            <li>
+              <span class="ceremony-name">Specify</span>
+              <span class="ceremony-desc">Each task gets scoped files, interfaces, and constraints</span>
+            </li>
+            <li>
+              <span class="ceremony-name">Execute</span>
+              <span class="ceremony-desc">AI generates code from validated, scoped specs</span>
+            </li>
+          </ul>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-number">03</div>
+          <h3>Validate Before You Generate</h3>
+          <div class="validation-checks">
+            <div class="check-item"><span class="check-icon">&check;</span> 342 domain checks across 15 perspectives</div>
+            <div class="check-item"><span class="check-icon">&check;</span> Semantic deduplication (3-layer)</div>
+            <div class="check-item"><span class="check-icon">&check;</span> Cross-reference validation</div>
+            <div class="check-item"><span class="check-icon">&check;</span> Deterministic scoring with auto-fixes</div>
+            <div class="check-item"><span class="check-icon">&check;</span> Auto story splitting for oversized stories</div>
+          </div>
+          <p>Catch errors at the specification level, where they're cheapest to fix. A bad plan found in 30 seconds beats a bad feature found in production.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section" id="how-it-works">
+    <div class="container">
+      <div class="section-label">Workflow</div>
+      <h2 class="section-title">From Idea to Traceable Code.</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">0</div>
+          <div class="step-content">
+            <h3>Install &amp; Launch</h3>
+            <p>Install globally via npm, then run <code>avc</code> in your project folder. It creates a <code>.avc/</code> config directory and opens a local Kanban board at <code>localhost:4174</code>. Add your LLM API key in Settings &mdash; OpenAI, Anthropic, Gemini, Xiaomi MiMo, or local models (LM Studio/Ollama).</p>
+            <div class="step-detail">
+              <code>npm install -g @agile-vibe-coding/avc</code>
+            </div>
+            <div class="step-detail" style="margin-top: 8px;">
+              <code>cd my-project && avc</code>
+            </div>
+          </div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Define Scope</h3>
+            <p>Describe what you're building &mdash; features, constraints, tech stack. The output is a structured project spec, not a chat transcript.</p>
+            <div class="step-detail">
+              <span class="step-ui-badge">Kanban UI</span>
+            </div>
+          </div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Decompose</h3>
+            <p>The project breaks into epics, stories, and atomic tasks. Each task gets scoped context &mdash; only the files and interfaces it needs. This is what makes your agents precise.</p>
+            <div class="step-detail">
+              <span class="step-ui-badge">Kanban UI</span>
+            </div>
+          </div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Validate</h3>
+            <p>Specs are validated before any code is written. Missing interfaces, conflicting constraints, unclear acceptance criteria &mdash; caught here, not in your PR review.</p>
+            <div class="step-detail">
+              <span class="step-ui-badge">Kanban UI</span>
+            </div>
+          </div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>Execute</h3>
+            <p>Each task runs in an isolated git worktree via an agentic tool-calling loop. The agent reads the doc chain (project &rarr; epic &rarr; story &rarr; task), implements, tests, and commits &mdash; all sandboxed.</p>
+            <div class="step-detail">
+              <span class="step-ui-badge">Kanban UI</span>
+            </div>
+          </div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step">
+          <div class="step-number">5</div>
+          <div class="step-content">
+            <h3>Verify &amp; Ship</h3>
+            <p>Behavioral tests validate each acceptance criterion. E2E browser tests run for UI stories. Failed criteria trigger auto-fix cycles &mdash; the responsible task is reset, patched, and re-verified. On pass, worktree merges to main with post-merge test gates.</p>
+            <div class="step-detail">
+              <span class="step-ui-badge">Kanban UI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section section-alt" id="features">
+    <div class="container">
+      <div class="section-label">Features</div>
+      <h2 class="section-title">The Engineering Layer Your Agents Are Missing.</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <h3>Scoped Context per Task</h3>
+          <p>Each task spec defines exactly which files, interfaces, and constraints are relevant. Your agents get precise briefs, not your entire repo.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          </div>
+          <h3>Bidirectional Traceability</h3>
+          <p>Code &harr; acceptance criteria &harr; story &harr; epic. When something breaks, trace it back to the requirement in seconds. When requirements change, find every affected line.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </div>
+          <h3>342-Check Validation</h3>
+          <p>3-tier micro-check system across 15 perspectives. Semantic deduplication, cross-reference validation, and deterministic scoring with auto-fixes &mdash; all before code generation.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+          </div>
+          <h3>Autopilot</h3>
+          <p>Chain all ceremonies end-to-end: Seed &rarr; Run &rarr; Commit, with parallel execution for independent tasks. Watchdog timer detects stuck sessions. State survives restarts.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3>Verify &amp; Auto-Fix</h3>
+          <p>Behavioral tests validate each acceptance criterion. E2E browser tests for UI stories. Failed criteria trigger fault diagnosis and automatic fix cycles.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><path d="M6 9v12"/></svg>
+          </div>
+          <h3>Safe Merge</h3>
+          <p>Worktree branches merge with conflict resolution, post-merge test gates, and automatic rollback on failure. Dependent tasks auto-promote on success.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Multi-LLM Support</h3>
+          <p>Claude, Gemini, OpenAI, Xiaomi MiMo, local models (LM Studio/Ollama). Auto-provider fallback if your primary is unavailable.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+          </div>
+          <h3>Local Kanban Board</h3>
+          <p>Run <code>avc</code> and see everything: project breakdown, task specs, validation status, agent progress. Real-time WebSocket updates. All local.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARALLEL EXECUTION -->
+  <section class="section" id="parallel">
+    <div class="container">
+      <div class="section-label">Scale</div>
+      <h2 class="section-title">Run Multiple Tasks with Confidence.</h2>
+      <p class="section-desc">
+        When every task has scoped context, explicit constraints, and isolated execution &mdash;
+        you can run as many as you want simultaneously without them conflicting.
+      </p>
+      <div class="parallel-grid">
+        <div class="parallel-visual">
+          <div class="parallel-track">
+            <div class="parallel-task" data-delay="0">
+              <span class="parallel-status running"></span>
+              <span class="parallel-name">implement-jwt-middleware</span>
+              <span class="parallel-tag">auth-system</span>
+            </div>
+            <div class="parallel-task" data-delay="1">
+              <span class="parallel-status running"></span>
+              <span class="parallel-name">create-user-endpoints</span>
+              <span class="parallel-tag">user-api</span>
+            </div>
+            <div class="parallel-task" data-delay="2">
+              <span class="parallel-status running"></span>
+              <span class="parallel-name">setup-database-migrations</span>
+              <span class="parallel-tag">data-layer</span>
+            </div>
+            <div class="parallel-task" data-delay="3">
+              <span class="parallel-status done"></span>
+              <span class="parallel-name">configure-ci-pipeline</span>
+              <span class="parallel-tag">devops</span>
+            </div>
+            <div class="parallel-task" data-delay="4">
+              <span class="parallel-status running"></span>
+              <span class="parallel-name">build-dashboard-components</span>
+              <span class="parallel-tag">frontend</span>
+            </div>
+          </div>
+        </div>
+        <div class="parallel-explanation">
+          <div class="parallel-point">
+            <h3>Scoped context eliminates conflicts</h3>
+            <p>Each task spec defines which files to touch and which to leave alone. Tasks working on different parts of the codebase can't step on each other.</p>
+          </div>
+          <div class="parallel-point">
+            <h3>Isolated worktrees, clean merges</h3>
+            <p>Every task runs in its own git worktree. Review each independently. Merge when ready. No conflict resolution hell.</p>
+          </div>
+          <div class="parallel-point">
+            <h3>Solo devs ship like teams</h3>
+            <p>One developer, five tasks running simultaneously. Ship an entire feature set in hours instead of days. Structure is what makes this possible.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REAL ARTIFACTS -->
+  <section class="section section-alt" id="artifacts">
+    <div class="container">
+      <div class="section-label">Real Output</div>
+      <h2 class="section-title">What Open Agile AI Actually Generates</h2>
+      <p class="section-desc">
+        Every ceremony produces structured, versioned artifacts inside your project's <code>.avc/</code> folder.
+        The full output includes:
+      </p>
+
+      <div class="artifacts-list">
+        <div class="artifact-row">
+          <div class="artifact-name"><code>doc.md</code></div>
+          <div class="artifact-desc">Project brief generated by the Sponsor Call &mdash; mission, scope, target users, tech stack, constraints.</div>
+        </div>
+        <div class="artifact-row">
+          <div class="artifact-name"><code>context.md</code> (project)</div>
+          <div class="artifact-desc">Machine-readable project context: identity, tech stack, auth mechanism, project characteristics, and the full epic map with story counts.</div>
+        </div>
+        <div class="artifact-row">
+          <div class="artifact-name"><code>context.md</code> (epic)</div>
+          <div class="artifact-desc">Per-epic specification: scope (in/out), features, data model sketch, non-functional requirements, cross-epic dependencies, and success criteria.</div>
+        </div>
+        <div class="artifact-row">
+          <div class="artifact-name"><code>context.md</code> (story)</div>
+          <div class="artifact-desc">Per-story spec: user story, acceptance criteria, technical notes (data model, auth, error handling), explicit scope boundaries, and dependency references.</div>
+        </div>
+        <div class="artifact-row">
+          <div class="artifact-name"><code>context.md</code> (task)</div>
+          <div class="artifact-desc">Atomic task brief: scoped file list, interface constraints, acceptance criteria subset, and implementation notes. Ready to feed to an AI agent.</div>
+        </div>
+        <div class="artifact-row">
+          <div class="artifact-name">Git worktrees</div>
+          <div class="artifact-desc">Each task executes in an isolated git worktree branch. Code is reviewed independently and merged with post-merge test gates.</div>
+        </div>
+        <div class="artifact-row">
+          <div class="artifact-name"><code>ceremonies-history.json</code></div>
+          <div class="artifact-desc">Full execution log: which ceremonies ran, when, their status, and checkpoint timestamps for resume-after-failure.</div>
+        </div>
+        <div class="artifact-row">
+          <div class="artifact-name"><code>token-history.json</code></div>
+          <div class="artifact-desc">LLM usage tracking per ceremony: input/output tokens, cache hits, provider used.</div>
+        </div>
+      </div>
+
+      <h3 class="artifacts-hierarchy-title">Hierarchical Structure</h3>
+      <p class="section-desc" style="margin-bottom: 24px;">
+        Context flows downward. Each level inherits from its parent and adds only what's specific to its scope.
+        The agent executing a task reads the full doc chain: project &rarr; epic &rarr; story &rarr; task.
+      </p>
+
+      <div class="code-examples">
+        <div class="code-block">
+          <div class="terminal-header">
+            <span class="terminal-dot red"></span>
+            <span class="terminal-dot yellow"></span>
+            <span class="terminal-dot green"></span>
+            <span class="terminal-title">.avc/ &mdash; generated project structure</span>
+          </div>
+          <pre class="terminal-body"><code><span class="t-str">.avc/</span>
+├── avc.json                    <span class="t-comment"># config &amp; model settings</span>
+├── ceremonies-history.json     <span class="t-comment"># execution log</span>
+├── token-history.json          <span class="t-comment"># LLM usage tracking</span>
+└── <span class="t-str">project/</span>
+    ├── doc.md                  <span class="t-comment"># project brief (Sponsor Call)</span>
+    ├── context.md              <span class="t-comment"># project context + epic map</span>
+    ├── <span class="t-str">context-0001/</span>           <span class="t-comment"># Epic: Foundation Services</span>
+    │   ├── context.md          <span class="t-comment"># epic spec + NFRs</span>
+    │   ├── <span class="t-str">context-0001-0001/</span> <span class="t-comment"># Story: User Registration</span>
+    │   │   └── context.md     <span class="t-comment"># ACs, tech notes, deps</span>
+    │   ├── <span class="t-str">context-0001-0002/</span> <span class="t-comment"># Story: Login &amp; Auth</span>
+    │   └── <span class="t-str">context-0001-0003/</span> <span class="t-comment"># Story: RBAC Middleware</span>
+    ├── <span class="t-str">context-0002/</span>           <span class="t-comment"># Epic: Core Business Logic</span>
+    ├── <span class="t-str">context-0003/</span>           <span class="t-comment"># Epic: Data Management</span>
+    └── <span class="t-str">context-0004/</span>           <span class="t-comment"># Epic: Frontend Shell</span></code></pre>
+        </div>
+        <div class="code-block">
+          <div class="terminal-header">
+            <span class="terminal-dot red"></span>
+            <span class="terminal-dot yellow"></span>
+            <span class="terminal-dot green"></span>
+            <span class="terminal-title">.avc/project/context.md &mdash; project-level context</span>
+          </div>
+          <pre class="terminal-body"><code><span class="t-comment"># Project Context</span>
+
+<span class="t-key">## Identity</span>
+- type: web-application
+- deployment: cloud
+- team: small
+
+<span class="t-key">## Tech Stack</span>
+- react, vite, typescript
+- node.js, express.js
+- postgresql, prisma
+
+<span class="t-key">## Authentication</span>
+- mechanism: session-based (httpOnly cookies)
+- IMPORTANT: All epics and stories MUST use this
+  auth mechanism consistently.
+
+<span class="t-key">## Project Characteristics</span>
+- hasCloud: true
+- hasFrontend: true
+- hasPublicAPI: false
+
+<span class="t-key">## Epic Map</span>
+- <span class="t-str">context-0001</span>: Foundation Services <span class="t-comment">(5 stories)</span>
+- <span class="t-str">context-0002</span>: Core Business Logic <span class="t-comment">(6 stories)</span>
+- <span class="t-str">context-0003</span>: Data Management <span class="t-comment">(4 stories)</span>
+- <span class="t-str">context-0004</span>: Frontend Shell &amp; UI <span class="t-comment">(8 stories)</span></code></pre>
+        </div>
+        <div class="code-block">
+          <div class="terminal-header">
+            <span class="terminal-dot red"></span>
+            <span class="terminal-dot yellow"></span>
+            <span class="terminal-dot green"></span>
+            <span class="terminal-title">.avc/project/context-0001/context-0001-0001/context.md &mdash; story spec</span>
+          </div>
+          <pre class="terminal-body"><code><span class="t-comment"># Story: User Registration and Email Invitation</span>
+<span class="t-comment"># id: context-0001-0001 | epic: Foundation Services</span>
+
+<span class="t-key">## User Story</span>
+As an admin, I want to invite new users by email
+so they can create accounts and join the team.
+
+<span class="t-key">## Scope</span>
+In:  Invite endpoint, email with tokenized link,
+     password setup page, duplicate check, audit log
+Out: Login flow, token refresh, RBAC enforcement
+
+<span class="t-key">## Acceptance Criteria</span>
+<span class="t-num">1.</span> POST /api/users/invite (admin only) accepts
+   { email, role } &rarr; returns 201 { id, email, role }
+<span class="t-num">2.</span> Invitation email sent with tokenized link
+   valid for 48 hours
+<span class="t-num">3.</span> POST /api/auth/setup-password accepts
+   { token, password } &rarr; returns 200
+<span class="t-num">4.</span> Duplicate email &rarr; 409 EMAIL_ALREADY_EXISTS
+<span class="t-num">5.</span> Non-admin callers &rarr; 403 FORBIDDEN
+<span class="t-num">6.</span> Audit event 'user.invited' emitted
+
+<span class="t-key">## Technical Notes</span>
+- <span class="t-str">Data Model</span>: User + InvitationToken table,
+  hashed token, expiresAt timestamp
+- <span class="t-str">Security</span>: bcrypt cost=12, crypto-random tokens
+- <span class="t-str">Email</span>: SMTP via env vars, retry on failure
+
+<span class="t-key">## Dependencies</span>
+- (none &mdash; foundation story)</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFFERENTIATION -->
+  <section class="section section-alt" id="differentiation">
+    <div class="container">
+      <div class="section-label">Positioning</div>
+      <h2 class="section-title">Where Open Agile AI<br><span class="title-muted">Fits in Your Stack</span></h2>
+      <div class="diff-table-wrap">
+        <table class="diff-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Coding Agents Alone</th>
+              <th class="diff-highlight">+ Open Agile AI</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="diff-label">Input</td>
+              <td>Natural language prompt</td>
+              <td class="diff-highlight">Structured spec with scoped context</td>
+            </tr>
+            <tr>
+              <td class="diff-label">Decomposition</td>
+              <td>Agent decides on the fly</td>
+              <td class="diff-highlight">Defined upfront: epic &rarr; story &rarr; task</td>
+            </tr>
+            <tr>
+              <td class="diff-label">Context scoping</td>
+              <td>Agent explores the repo</td>
+              <td class="diff-highlight">Each task specifies which files &amp; interfaces</td>
+            </tr>
+            <tr>
+              <td class="diff-label">Validation</td>
+              <td>After code is written</td>
+              <td class="diff-highlight">Before code is generated</td>
+            </tr>
+            <tr>
+              <td class="diff-label">Traceability</td>
+              <td>Git blame</td>
+              <td class="diff-highlight">Code &harr; criteria &harr; story &harr; epic</td>
+            </tr>
+            <tr>
+              <td class="diff-label">Methodology</td>
+              <td>Ad-hoc per session</td>
+              <td class="diff-highlight">Repeatable engineering process</td>
+            </tr>
+            <tr>
+              <td class="diff-label">Verification</td>
+              <td>Manual testing</td>
+              <td class="diff-highlight">Auto-verify per AC, fault diagnosis, auto-fix cycles</td>
+            </tr>
+            <tr>
+              <td class="diff-label">Recovery</td>
+              <td>Start over</td>
+              <td class="diff-highlight">Resume after failure, rollback on merge failure</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY / MANIFESTO -->
+  <section class="section" id="philosophy">
+    <div class="container">
+      <div class="section-label">Principles</div>
+      <h2 class="section-title">Engineering Principles for the Age of AI Agents</h2>
+      <p class="section-desc">
+        Grounded in the <a href="https://agilevibecoding.org" class="inline-link">Agile Vibe Coding Manifesto</a> &mdash; principles for developers who want to ship fast without sacrificing the engineering practices that make software maintainable.
+      </p>
+
+      <!-- Values -->
+      <h3 class="manifesto-heading">Values</h3>
+      <div class="manifesto-values">
+        <div class="value-item">
+          <span class="value-preferred">Accountability</span>
+          <span class="value-over">over</span>
+          <span class="value-other">anonymous generation</span>
+        </div>
+        <div class="value-item">
+          <span class="value-preferred">Traceable intent</span>
+          <span class="value-over">over</span>
+          <span class="value-other">opaque implementation</span>
+        </div>
+        <div class="value-item">
+          <span class="value-preferred">Discoverable domain structure</span>
+          <span class="value-over">over</span>
+          <span class="value-other">scattered code</span>
+        </div>
+        <div class="value-item">
+          <span class="value-preferred">Human-readable documentation</span>
+          <span class="value-over">over</span>
+          <span class="value-other">implicit knowledge</span>
+        </div>
+      </div>
+
+      <!-- Principles -->
+      <h3 class="manifesto-heading">Principles</h3>
+      <div class="manifesto">
+        <div class="manifesto-item">
+          <div class="manifesto-number">I</div>
+          <blockquote>Customer value remains the primary objective.</blockquote>
+          <p>Speed without value constitutes waste. Acceleration must deliver validated customer value.</p>
+        </div>
+        <div class="manifesto-item">
+          <div class="manifesto-number">II</div>
+          <blockquote>Humans remain accountable for software systems.</blockquote>
+          <p>Clear human responsibility exists for all deployed systems, regardless of production method.</p>
+        </div>
+        <div class="manifesto-item">
+          <div class="manifesto-number">III</div>
+          <blockquote>Every change has traceable intent.</blockquote>
+          <p>Features and modifications connect to requirements, decisions, or problems being addressed.</p>
+        </div>
+        <div class="manifesto-item">
+          <div class="manifesto-number">IV</div>
+          <blockquote>Systems remain deterministic and verifiable.</blockquote>
+          <p>Software behaves predictably and gets verified through testing.</p>
+        </div>
+        <div class="manifesto-item">
+          <div class="manifesto-number">V</div>
+          <blockquote>Documentation preserves shared understanding.</blockquote>
+          <p>Human-readable documentation maintains system intent and structure clarity.</p>
+        </div>
+        <div class="manifesto-item">
+          <div class="manifesto-number">VI</div>
+          <blockquote>Code structure reflects the domain.</blockquote>
+          <p>Organization centers on domain concepts rather than technical convenience.</p>
+        </div>
+        <div class="manifesto-item">
+          <div class="manifesto-number">VII</div>
+          <blockquote>Architecture guides and constrains generation.</blockquote>
+          <p>Clear boundaries and patterns direct automated generation processes.</p>
+        </div>
+        <div class="manifesto-item">
+          <div class="manifesto-number">VIII</div>
+          <blockquote>Automation must remain verifiable.</blockquote>
+          <p>Generated outputs stay understandable, reviewable, and verifiable by humans.</p>
+        </div>
+        <div class="manifesto-item">
+          <div class="manifesto-number">IX</div>
+          <blockquote>Generated systems remain understandable and maintainable.</blockquote>
+          <p>Software retains readability and evolvability regardless of production source.</p>
+        </div>
+        <div class="manifesto-item">
+          <div class="manifesto-number">X</div>
+          <blockquote>Context is explicit and versioned.</blockquote>
+          <p>Requirements, architecture, and domain language get externalized and versioned.</p>
+        </div>
+        <div class="manifesto-item">
+          <div class="manifesto-number">XI</div>
+          <blockquote>Knowledge remains accessible.</blockquote>
+          <p>Critical knowledge resides in documentation, tests, and architectural records.</p>
+        </div>
+        <div class="manifesto-item">
+          <div class="manifesto-number">XII</div>
+          <blockquote>Teams regularly reflect on the use of automation.</blockquote>
+          <p>Teams evaluate and adjust automated system practices continuously.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BETA -->
+  <section class="section section-alt" id="beta">
+    <div class="container">
+      <div class="beta-card">
+        <div class="section-label">Early Access</div>
+        <h2 class="section-title">Open Source. Free. Runs Locally.</h2>
+        <div class="beta-columns">
+          <div class="beta-col">
+            <h4 class="beta-status-label available">Available Now</h4>
+            <ul class="beta-list">
+              <li><span class="check-icon">&check;</span> Sponsor Call (project scoping)</li>
+              <li><span class="check-icon">&check;</span> Sprint Planning (decomposition + validation)</li>
+              <li><span class="check-icon">&check;</span> Seed (task generation)</li>
+              <li><span class="check-icon">&check;</span> Run (agentic code generation in worktrees)</li>
+              <li><span class="check-icon">&check;</span> Commit (safe merge with test gates)</li>
+              <li><span class="check-icon">&check;</span> Verify (behavioral + E2E tests)</li>
+              <li><span class="check-icon">&check;</span> Autopilot (end-to-end chaining)</li>
+              <li><span class="check-icon">&check;</span> Local Kanban board with real-time updates</li>
+              <li><span class="check-icon">&check;</span> Multi-LLM support with auto-fallback</li>
+              <li><span class="check-icon">&check;</span> 342-check micro-validation system</li>
+            </ul>
+          </div>
+          <div class="beta-col">
+            <h4 class="beta-status-label in-progress">Coming Next</h4>
+            <ul class="beta-list">
+              <li><span class="progress-icon">&bull;</span> Initialize on existing projects (retro-create epics &amp; stories)</li>
+              <li><span class="progress-icon">&bull;</span> Team collaboration</li>
+            </ul>
+          </div>
+        </div>
+        <p class="beta-note">
+          Open Agile AI is open source, free, and runs entirely on your machine. No cloud. No accounts. We ship weekly &mdash; your feedback shapes what we build next.
+        </p>
+        <div class="beta-cta">
+          <a href="#get-started" class="btn btn-primary btn-lg">Start Building</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GET STARTED -->
+  <section class="section" id="get-started">
+    <div class="container">
+      <div class="section-label">Get Started</div>
+      <h2 class="section-title">Try It Now &mdash; Alpha Release</h2>
+      <div class="get-started-alpha">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <span>Alpha &mdash; The spec &amp; planning layer is ready. Code generation ceremonies are in very early stages. Expect rough edges.</span>
+      </div>
+
+      <div class="get-started-steps">
+        <div class="get-started-step">
+          <div class="get-started-number">1</div>
+          <div class="get-started-body">
+            <h3>Install</h3>
+            <div class="step-detail"><code>npm install -g @agile-vibe-coding/avc</code></div>
+          </div>
+        </div>
+        <div class="get-started-step">
+          <div class="get-started-number">2</div>
+          <div class="get-started-body">
+            <h3>Launch in your project folder</h3>
+            <div class="step-detail"><code>cd my-project && avc</code></div>
+            <p>This creates a <code>.avc/</code> directory and opens the Kanban board at <code>localhost:4174</code>. Add your LLM API key in Settings &mdash; OpenAI, Anthropic, Gemini, Xiaomi MiMo, or local models (LM Studio/Ollama).</p>
+          </div>
+        </div>
+        <div class="get-started-step">
+          <div class="get-started-number">3</div>
+          <div class="get-started-body">
+            <h3>Run Sponsor Call</h3>
+            <p>Describe your project idea. The tool generates a structured project brief with scope, tech stack, and constraints.</p>
+          </div>
+        </div>
+        <div class="get-started-step">
+          <div class="get-started-number">4</div>
+          <div class="get-started-body">
+            <h3>Run Sprint Planning</h3>
+            <p>The project decomposes into epics, stories, and tasks &mdash; each with acceptance criteria, scoped context, and dependency maps. Explore them in the Kanban board.</p>
+          </div>
+        </div>
+        <div class="get-started-step">
+          <div class="get-started-number">5</div>
+          <div class="get-started-body">
+            <h3>Review what was generated</h3>
+            <p>Open the Kanban board at <code>localhost:4174</code>. You should see the full epic &rarr; story hierarchy with structured specs, acceptance criteria, and dependencies. This is what Open Agile AI does best today.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="get-started-warning">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <div>
+          <strong>Don't expect generated code yet.</strong> The Seed, Run, Commit, and Verify ceremonies exist but are still being stabilized. Focus on the spec and planning layer for now &mdash; that's where the value is at this stage.
+        </div>
+      </div>
+
+      <div class="get-started-cta">
+        <a href="https://github.com/Agile-Vibe-Coding/OpenAgileAI" class="btn btn-primary btn-lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          View on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="section section-alt cta-section">
+    <div class="container">
+      <h2 class="cta-title">Your Agents Are Fast.<br><span class="hero-accent">Make Them Precise.</span></h2>
+      <p class="cta-sub">Specs before prompts. Validation before generation. Traceability by default. The engineering process layer your AI agents are missing.</p>
+      <div class="hero-ctas">
+        <a href="#get-started" class="btn btn-primary btn-lg">Get Started</a>
+        <a href="https://github.com/Agile-Vibe-Coding/OpenAgileAI" class="btn btn-secondary btn-lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          Join on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          OpenAgile<span class="logo-accent">.AI</span>
+        </div>
+        <div class="footer-copy">
+          &copy; 2026 Open Agile AI. Licensed under <a href="https://polyformproject.org/licenses/noncommercial/1.0.0/" class="inline-link">PolyForm Noncommercial 1.0.0</a>.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
