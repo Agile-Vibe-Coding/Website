@@ -1217,6 +1217,18 @@ code {
   margin-top: 8px;
 }
 
+.get-started-screenshot {
+  margin-top: 16px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.get-started-screenshot img {
+  width: 100%;
+  display: block;
+}
+
 .get-started-warning {
   display: flex;
   align-items: flex-start;

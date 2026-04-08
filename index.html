@@ -482,8 +482,8 @@
       <div class="section-label">Real Output</div>
       <h2 class="section-title">What Open Agile AI Actually Generates</h2>
       <p class="section-desc">
-        Every ceremony produces structured, versioned artifacts inside your project's <code>.avc/</code> folder.
-        The full output includes:
+        Open Agile AI generates both the engineering specs and the solution code.
+        Specs live in <code>.avc/</code>, code is written in isolated worktrees that run in parallel, and every artifact is structured for long-term maintenance, traceability, and accountability.
       </p>
 
       <div class="artifacts-list">
@@ -508,8 +508,12 @@
           <div class="artifact-desc">Atomic task brief: scoped file list, interface constraints, acceptance criteria subset, and implementation notes. Ready to feed to an AI agent.</div>
         </div>
         <div class="artifact-row">
+          <div class="artifact-name">Solution code</div>
+          <div class="artifact-desc">AI agents generate implementation code from validated specs. Every file traces back to a story and acceptance criterion &mdash; nothing is orphaned.</div>
+        </div>
+        <div class="artifact-row">
           <div class="artifact-name">Git worktrees</div>
-          <div class="artifact-desc">Each task executes in an isolated git worktree branch. Code is reviewed independently and merged with post-merge test gates.</div>
+          <div class="artifact-desc">Independent tasks run in parallel, each in its own isolated worktree branch. Code is reviewed independently and merged with post-merge test gates.</div>
         </div>
         <div class="artifact-row">
           <div class="artifact-name"><code>ceremonies-history.json</code></div>
@@ -817,7 +821,10 @@ Out: Login flow, token refresh, RBAC enforcement
           <div class="beta-col">
             <h4 class="beta-status-label in-progress">Coming Next</h4>
             <ul class="beta-list">
-              <li><span class="progress-icon">&bull;</span> Initialize on existing projects (retro-create epics &amp; stories)</li>
+              <li><span class="progress-icon">&bull;</span> State of the art AI coding loop</li>
+              <li><span class="progress-icon">&bull;</span> Integrated Kanban AI agent</li>
+              <li><span class="progress-icon">&bull;</span> Integrated code editor</li>
+              <li><span class="progress-icon">&bull;</span> Initialize on existing projects</li>
               <li><span class="progress-icon">&bull;</span> Team collaboration</li>
             </ul>
           </div>
@@ -856,6 +863,9 @@ Out: Login flow, token refresh, RBAC enforcement
             <h3>Launch in your project folder</h3>
             <div class="step-detail"><code>cd my-project && avc</code></div>
             <p>This creates a <code>.avc/</code> directory and opens the Kanban board at <code>localhost:4174</code>. Add your LLM API key in Settings &mdash; OpenAI, Anthropic, Gemini, Xiaomi MiMo, or local models (LM Studio/Ollama).</p>
+            <div class="get-started-screenshot">
+              <img src="assets/images/snapshots/openagile-avc-cli.png" alt="Open Agile AI CLI running with Kanban board" loading="lazy">
+            </div>
           </div>
         </div>
         <div class="get-started-step">
@@ -877,6 +887,9 @@ Out: Login flow, token refresh, RBAC enforcement
           <div class="get-started-body">
             <h3>Review what was generated</h3>
             <p>Open the Kanban board at <code>localhost:4174</code>. You should see the full epic &rarr; story hierarchy with structured specs, acceptance criteria, and dependencies. This is what Open Agile AI does best today.</p>
+            <div class="get-started-screenshot">
+              <img src="assets/images/snapshots/openagile-avc-kanban-card.png" alt="Kanban board showing task card with acceptance criteria" loading="lazy">
+            </div>
           </div>
         </div>
       </div>
@@ -884,7 +897,7 @@ Out: Login flow, token refresh, RBAC enforcement
       <div class="get-started-warning">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
         <div>
-          <strong>Don't expect generated code yet.</strong> The Seed, Run, Commit, and Verify ceremonies exist but are still being stabilized. Focus on the spec and planning layer for now &mdash; that's where the value is at this stage.
+          <strong>Don't expect generated code yet.</strong> The Seed, Run, Commit, and Verify ceremonies exist but are still preliminary. Focus on the spec and planning layer for now &mdash; that's where the value is at this stage.
         </div>
       </div>
 
